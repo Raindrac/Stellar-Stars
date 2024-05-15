@@ -1,0 +1,8 @@
+[
+//Change constellation line color
+	{
+		"op": "replace",
+		"path": "/cockpitViewSettings/constellationLineColor",
+		"value": [98, 96, 102, 255]
+	}
+]

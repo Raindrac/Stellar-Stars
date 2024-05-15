@@ -1,0 +1,114 @@
+[
+// Replace the array of night sky stars with a completely new one, using duplicates to define probability
+	{
+		"op": "replace",
+		"path": "/stars/list",
+		"value": [
+			"/sky/stars/ste_whiteL.png",
+			"/sky/stars/ste_whiteM.png",
+			"/sky/stars/ste_whiteS.png",
+			"/sky/stars/ste_whiteS.png",
+			"/sky/stars/ste_whiteS.png",
+			"/sky/stars/ste_whiteS.png",
+			"/sky/stars/ste_whiteS.png",
+			"/sky/stars/ste_whiteS.png",
+			"/sky/stars/ste_blueL.png",
+			"/sky/stars/ste_blueM.png",
+			"/sky/stars/ste_blueS.png",
+			"/sky/stars/ste_blueS.png",
+			"/sky/stars/ste_blueS.png",
+			"/sky/stars/ste_blueS.png",
+			"/sky/stars/ste_blueS.png",
+			"/sky/stars/ste_blueS.png",
+			"/sky/stars/ste_violetL.png",
+			"/sky/stars/ste_violetM.png",
+			"/sky/stars/ste_violetS.png",
+			"/sky/stars/ste_violetS.png",
+			"/sky/stars/ste_violetS.png",
+			"/sky/stars/ste_violetS.png",
+			"/sky/stars/ste_violetS.png",
+			"/sky/stars/ste_violetS.png",
+			"/sky/stars/ste_purpleM.png",
+			"/sky/stars/ste_purpleM.png"
+		]
+	},
+// Reduce the amount of stars visible in the sky
+	{
+		"op": "replace",
+		"path": "/stars/cellCount/0",
+		"value": 55
+	},
+	{
+		"op": "replace",
+		"path": "/stars/cellCount/1",
+		"value": 55
+	},
+// Increase cell sizes to reduce the amount of nebulae visible in outer space
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/0/cellSize",
+		"value": 800
+	},
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/1/cellSize",
+		"value": 950
+	},
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/2/cellSize",
+		"value": 1100
+	},
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/3/cellSize",
+		"value": 4000
+	},
+// Drastically reduce velocity of nebulae in outer space
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/0/velocityRange",
+		"value": [-0.1, 0.2]
+	},
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/1/velocityRange",
+		"value": [-0.1, 0.2]
+	},
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/2/velocityRange",
+		"value": [-0.1, 0.2]
+	},
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/3/velocityRange",
+		"value": [-0.1, 0.2]
+	},
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/0/angularVelocityRange",
+		"value": [-0.25, 0.25]
+	},
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/1/angularVelocityRange",
+		"value": [-0.25, 0.25]
+	},
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/2/angularVelocityRange",
+		"value": [-0.25, 0.25]
+	},
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/3/angularVelocityRange",
+		"value": [-0.25, 0.25]
+	},
+// Allow for the second range to support up to two nebulae
+	{
+		"op": "replace",
+		"path": "/spaceDebrisFields/1/cellCountRange/1",
+		"value": 2
+	}
+]
